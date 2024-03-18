@@ -1,0 +1,80 @@
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+    path('get_courses/', get_courses),
+    path('get_course_by_id/<int:pk>/', get_course_by_id),
+    path('add_course/', add_course),
+    path('update_course/<int:pk>/', update_course),
+
+    path('get_branches/', get_branches),
+    path('get_branch_by_id/<int:pk>/', get_branch_by_id),
+    path('add_branch/', add_branch),
+    path('update_branch/<int:pk>/', update_branch),
+    path('delete_branch/<int:pk>/', delete_branch),
+    path('get_courses_by_branch_id/<int:pk>/', get_courses_by_branch_id),
+    path('search_for_course_in_branch/<int:pk>/', search_for_course_in_branch),
+    path('remove_course_from_branch/<int:pk>/', remove_course_from_branch),
+
+    path('get_students/', get_students),
+    path('get_student_by_id/<int:pk>/', get_student_by_id),
+    path('add_student/', add_student),
+    path('update_student/<int:pk>/', update_student),
+    path('delete_student/<int:pk>/', delete_student),
+    path('get_students_of_branch/<int:pk>/', get_students_of_branch),
+    path('get_branch_of_student/<int:pk>/', get_branch_of_student),
+    path('get_student_by_passport_number/', get_student_by_passport_number),
+    path('get_students_by_status/<int:pk>/', get_students_by_status),
+    path('get_students_by_desired_course/<int:pk>/', get_students_by_desired_course),
+    path('set_debt/', set_debt),
+    path('get_unpayed_students/', get_unpayed_students),
+    path('get_payed_students/', get_payed_students),
+
+    path('get_payments/', get_payments),
+    path('get_payment_by_id/<int:pk>/', get_payment_by_id),
+    path('create_payment/', create_payment),
+    path('update_payment/<int:pk>/', update_payment),
+    path('get_payments_of_student/<int:pk>/', get_payments_of_student),
+
+    path('get_certificates/', get_certificates),
+    path('get_certificate_by_id/<int:pk>/', get_certificate_by_id),
+    path('add_certificate/', add_certificate),
+    path('delete_certificate/<int:pk>/', delete_certificate),
+    path('get_certificates_by_name/', get_certificates_by_name),
+
+    path('get_teachers/', get_teachers),
+    path('get_teacher_by_id/<int:pk>/', get_teacher_by_id),
+    path('add_teacher/', add_teacher),
+    path('update_teacher/<int:pk>/', update_teacher),
+    path('delete_teacher/<int:pk>/', delete_teacher),
+    path('get_teachers_by_branch/<int:pk>/', get_teachers_by_branch),
+    path('get_teacher_by_passport_number/', get_teacher_by_passport_number),
+
+    path('get_groups/', get_groups),
+    path('get_group_by_id/<int:pk>/', get_group_by_id),
+    path('add_group/', add_group),
+    path('update_group/<int:pk>/', update_group),
+    path('get_group_by_name/', get_group_by_name),
+    path('get_groups_by_teacher/<int:pk>/', get_groups_by_teacher),
+    path('get_teacher_by_group/<int:pk>/', get_teacher_by_group),
+    path('get_course_by_group/<int:pk>/', get_course_by_group),
+    path('get_groups_by_course/<int:pk>/', get_groups_by_course),
+    path('get_groups_by_branch/<int:pk>/', get_groups_by_branch),
+    path('get_branch_by_group/<int:pk>/', get_branch_by_group),
+    path('get_students_by_group/<int:pk>/', get_students_by_group),
+    path('add_student_to_group/<int:pk>/', add_student_to_group),
+    path('get_group_by_student/<int:pk>/', get_group_by_student),
+    path('remove_student_from_group/<int:pk>/', remove_student_from_group),
+
+    path('add_note/<int:pk>/', add_note),
+    path('get_notes/<int:pk>/', get_notes),
+    path('send_notes_to_group/<int:pk>/', send_notes_to_group),
+    path('delete_note/<int:pk>/', delete_note),
+
+    path('get_plan_lesson/<int:pk>/', get_plan_lesson),
+    path('add_lesson/', add_lesson),
+
+    path('get_plan/<int:pk>/', get_plan),
+    path('add_plan/', add_plan),
+    path('get_plan_by_course/<int:pk>/', get_plan_by_course)
+]
